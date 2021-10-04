@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct  4 12:42:29 2021
+
+@author: Admin
+
+Nama : Favian Qintara Daffa
+Nim : 064002100014
+
+"""
+
+
+zz = input("Masukkan namamu : ")
+print("Halo",zz)
+print("Masukkan angka segitiga yang anda inginkan")
+
+repeat = "y"
+while repeat == "y" or repeat == "Y" :
+    x = int(input("Sisi A :"))
+    y = int(input("Sisi B :"))
+    z = int(input("Sisi C :"))
+    if x+y <= z or x+z <= y or z+y <= x:
+        print("Bukan merupakan segitiga")
+        repeat = input("Mencari segitiga lagi?")
+    elif x == y == z :
+        print("Merupakan segitiga sama sisi")
+        repeat = input("Mencari segitiga lagi?")
+    elif x == y or y == z or z == x :
+        print("Merupakan segitiga sama kaki")
+        repeat = input("Mencari segitiga lagi?")
+    elif x*x + y*y == z*z or x*x + z*z == y*y or y*y + z*z == x*x :
+        print("Merupakan segitiga siku siku")
+        repeat = input("Mencari segitiga lagi?")
+    else :
+        print("Merupakan segitiga sembarang")
+        repeat = input("Mencari segitiga lagi?")
+print("Terima kasih telah belajar bersama kami")
