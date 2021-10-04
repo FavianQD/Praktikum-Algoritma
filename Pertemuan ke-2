@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct  4 11:26:48 2021
+
+@author: Admin
+
+Favian Qintara Daffa
+064002100014
+
+"""
+
+import math
+print("\n")
+lat1 = float(input("Masukkan lattitude 1 : "))
+lat2 = float(input("Masukkan lattitude 2 : "))
+lon1 = float(input("Masukkan longitude 1 : "))
+lon2 = float(input("Masukkan longitude 2 : "))
+
+lon = (lon2-lon1)
+lat = (lat2-lat1)
+x= math.sin(math.radians(lon/2))**2 + math.cos(math.radians(lat1)) + math.cos(math.radians(lat2))*math.sin(math.radians(lat/2))**2
+y= 2*math.asin(math.sqrt(x))
+hasil = 6371.01*y
+
+print("\n")
+print("Jaraknya adalah", hasil)
