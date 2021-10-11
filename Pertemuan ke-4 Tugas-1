@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 11 13:18:57 2021
+
+@author: Admin
+
+Favian Qintara Daffa
+064002100014
+
+"""
+
+
+x = int(input("Masukkan angka : "))
+
+while x > 0:
+    for y in range(x):
+        print(x , end="")
+    print()
+    x = y
