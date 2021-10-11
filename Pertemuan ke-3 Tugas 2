@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 11 12:50:20 2021
+
+@author: Admin
+Nama : Favian Qintara Daffa
+Nim  : 064002100014
+"""
+import cmath as cm
+repeat = "y"
+while repeat == "y" or repeat == "Y" :
+    a = int(input("Masukkan angka pertama : "))
+    b = int(input("Masukkan angka kedua : "))
+    c = int(input("Masukkan angka ketiga : "))
+    if a == 0 : 
+        print("Angka pertama tidak boleh nol")
+    else:
+        X = (b**2) - (4*a*c)
+        if X > 0 :
+            x1 = (-b + cm.sqrt(X))/(2*a)
+            x2 = (-b + cm.sqrt(X))/(2*a)
+            print("merupakan jenis akar yang berbeda")
+            print("jadi persamaan kuadratnya adalah",x1,"dan",x2)
+            print("dengan deteminan",X,)
+            repeat = input("ingin mencari angka lagi?")
+        elif X == 0 :
+            x1 = (-b) / (2*a)
+            x2 = (-b) / (2*a)
+            print("merupakan jenis akar yang kembar")
+            print("jadi persamaan kuadratnya adalah",x1,"dan",x2)
+            print("dengan deteminan",X,)
+            repeat = input("ingin mencari angka lagi?")
+        elif X < 0 :
+            x1 = (-b + cm.sqrt(X)) / (2*a)
+            x2 = (-b + cm.sqrt(X)) / (2*a)
+            print("merupakan jenis akar imaginer")
+            print("jadi persamaan kuadratnya adalah",x1,"dan",x2)
+            repeat = input("ingin mencari angka lagi? (Y/T)")
+print("OKE TERIMA KASIH")
