@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 25 18:10:48 2021
+
+@author: Admin
+
+Nama : Favian Qintara Daffa
+Nim  : 064002100014
+
+"""
+
+input('Harga Tiket')
+
+while True :
+    umur = int(input("Masukkan umur anda :"))
+    bayar = True 
+    if umur <= 5 :
+        harga = 0
+        print("Umur dibawah 5 tahun Tidak dipungut biaya")
+        bayar = False
+    elif umur >= 5 and umur <= 8 :
+        harga = 20000
+        print("Harga tiket sebesar Rp.",harga)
+    elif umur >= 9 and umur and umur <= 100 :
+        harga = 25000
+        print("Harga tiket sebesar Rp.",harga)
+    else :
+        print("Masukkan umur anda")
+        
+    if bayar == True :
+        uang = int(input("Masukkan jumlah uang anda : "))
+        if uang == harga :
+            print("Uang pas")
+        elif uang < harga :
+            print("Nominal uang kurang")
+        elif uang > harga :
+            uang -= harga
+            print("kembalian anda Rp.",uang)
