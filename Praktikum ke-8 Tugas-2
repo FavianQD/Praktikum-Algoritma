@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 22 00:08:31 2021
+
+@author: Admin
+
+Nama : Favian Qintara Daffa
+Nim  : 064002100014
+
+"""
+
+print("Selamat datang di kalkulator online")
+a = float(input("Masukan angka: "))
+b = int(input("Masukkan pangkat: "))
+
+def pangkat(a,b):
+
+    if b >= 1 :
+        return a * pangkat(a, b - 1)
+
+    return a
+hasil = pangkat(a, b)
+
+print(f"hasil nya adalah = {hasil}")
