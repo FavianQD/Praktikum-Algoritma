@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov 15 18:40:07 2021
+
+@author: Admin
+
+Nama : Favian Qintara Daffa
+Nim  : 064002100014
+
+"""
+def ordinal_number(x):
+    a = lambda x :"(%d, '%s')" % (x,{1:"st",2:"nd",3:"rd"}.get(x if x < 20 else x % 10,"th"))
+    print ("Ordinalnya :"+ (a(x)))
+  
+print("Masukan angka")
+print("Ketik [0] salah")
+loop = True
+while loop == True:
+    x = int(input("Masukan angka : "))
+    if x == 0 :
+        loop = False
+        break
+    else:
+        ordinal_number(x)
