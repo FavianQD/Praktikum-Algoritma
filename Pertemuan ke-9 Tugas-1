@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov 25 00:50:53 2021
+
+@author: Admin
+
+Nama : Favian Qintara Daffa
+Nim  : 064002100014
+
+"""
+def edit():
+    biodata = open('Biodata Mahasiswa.txt', 'w')
+    biodata.write(str(text))
+    biodata.close
+    
+    
+p1 = str(input("Siapa nama anda : "))
+p1 = list(p1.split('  '))
+p1c = [str.capitalize(x) for x in p1]
+p1x = ' '.join(p1c)
+p2 = str(input("Berapa umurmu : "))
+p3 = str.upper(input("Tempat tinggal : "))
+p4 = str(input("Alamat email : "))
+p5 = str(input("Nama dosen pengajar : "))
+p5 = list(p5.split('  '))
+p5c = [str.capitalize(x) for x in p5]
+p5x = ' '.join(p5c)
+    
+    
+text = str(f'''
+nama: {p1x}
+umur: {p2}
+alamat: {p3}
+email: {p4}
+dosen wali: {p5x}
+''')
+    
+
+print(p1, p2,p3,p4,p5)
+    
+edit()
