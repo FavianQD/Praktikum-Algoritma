@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov 25 13:41:20 2021
+
+@author: Admin
+
+Nama : Favian Qintara Daffa
+Nim  : 064002100014
+
+
+"""
+
+title = str(input("Masukkan nama file yang ingin dibuat:"))
+filename = (f"{title}.txt")
+f = open(filename, "w")
+f.close()
+
+print(f"File {filename} telah dibuat.")
+print("TEKAN N atau n untuk menghentikan program")
+
+def write(string):
+    file = open(f"{title}.txt","w")
+    file.write(str(string))
+    file.close()
+
+def read ():
+    file = open(f"{title}.txt", "r")
+    teks = file.read()
+    print(teks)
+
+baris = True
+while baris == True:
+    isi = (input(""))
+    if isi == "n" or isi == "N":
+        print("\nTEKS TELAH TERSIMPAN")
+        baris = False
+    else:
+        write(isi)
+        read()
