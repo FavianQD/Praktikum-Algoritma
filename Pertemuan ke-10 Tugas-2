@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec  6 22:41:53 2021
+
+@author: Admin
+
+Nama : Favian Qintara Daffa
+Nim  : 064002100014
+
+"""
+def bubbleSort(x):
+    count = 0
+    for idx in range(len(x)-1):
+        if x[idx] > x[idx + 1]:
+            x[idx],x[idx + 1] = x[idx + 1],x[idx]
+            count += 1
+    if count == 0:
+        return x
+    else:
+        bubbleSort(x)
+
+while True:
+    while True:
+        try:        
+            hmm = str(input('Masukkan angka: (x,y,z,...)\n>> ')).split(',')
+            hmm = [int(i) for i in hmm]
+        except:
+            print('\nError:\n* Syntax Error\n* Non Bilangan-Bulat')
+        else:
+            break
+    
+    print(f'\n\nList: {hmm}')
+    
+    bubbleSort(hmm)
+    
+    print(f'\n\nList*: {hmm}')
